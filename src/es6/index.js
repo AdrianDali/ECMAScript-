@@ -132,4 +132,20 @@ const listOfNames4 = name => {
 const square = num => num * num
 
 //----------------------------------------------------------------
-// PROMESAS
+// PROMESAS -- ASINCRONISMO 
+// js no es ASINCRONISMO, porque no efectua varios nodos
+// promesas es el algo va a pasar 
+
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if (true){
+            resolve('HEY')
+        }else {
+            reject('ups')
+        }
+    })
+}
+
+helloPromise()
+    .then((response => console.log(response) ))
+    .catch((err) => console.log(err))
