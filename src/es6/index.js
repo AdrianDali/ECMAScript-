@@ -102,7 +102,7 @@ obj2 = { name, age };
 console.log(obj)
 console.log(obj2)
 
-
+//----------------------------------------------------------------
 //ARROW FUNCTIONS/ funciones anonimas
 
 //antes de es6
@@ -149,3 +149,46 @@ const helloPromise = () => {
 helloPromise()
     .then((response => console.log(response) ))
     .catch((err) => console.log(err))
+
+
+//--------------------------------
+//PROGRAMACION ORIENTADA A OBJETOS
+//clase y constructor
+class calculator {
+    constructor(){
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+
+    sum(valueA, valueB) {
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+
+}
+
+const calc = new calculator();
+console.log(calc.sum(2,2))
+
+//-------------------------------------------------------------------------
+//SEPARAR EN MODULOS
+
+import {hello} from './module'
+console.log(hello())
+
+//-------------------------------------------------------------------------
+//GENERATOR  generadores
+
+function * helloWorld() {
+    if(true){
+        yield 'Hello, ';
+    }
+    if(true){
+        yield 'World';
+    }
+}
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value)
+console.log(generatorHello.next().value)
+console.log(generatorHello.next().value)
