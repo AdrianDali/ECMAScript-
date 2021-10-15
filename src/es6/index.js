@@ -41,8 +41,7 @@ console.log(epicPhrase2);
 //MULTILINEA
 
 //antes de es6 
-let lorem = "Frase epica     \n"
-+ "otra frase epica"
+let lorem = "Frase epica  \n otra frase epica"
 
 //con es6 
 let lorem2 = `otra frase epica
